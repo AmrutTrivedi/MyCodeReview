@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+
+public class ConvertListToMap {
+	public static void main(String args[]) {
+		ArrayList<String> al = new ArrayList<String>();
+		
+		al.add("Raju");
+		al.add("Pushpa");
+		al.add("Deepak");
+		al.add("Sunil");
+		System.out.println("The List Values are :"+al);
+		
+	}
+	
+}

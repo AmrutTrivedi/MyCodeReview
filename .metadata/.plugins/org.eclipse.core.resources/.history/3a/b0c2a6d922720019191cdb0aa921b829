@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.*;
+public class MyClass {
+	public static void main(String argsp[]) {
+		
+	}
+	int id;
+	String name,email;
+	
+	MyClass(int r, String s ,String s1)
+	{
+		id = r;
+		name = s;
+		email = s1;
+	}
+}
+class StudentManagement{
+	public static void main(String args[]) {
+		
+		MyClass m1 = new MyClass(1,"Amit","amit12@gmail.com");
+		MyClass m2 = new MyClass(2,"Amrut","amit12@gmail.com");
+		MyClass m3 = new MyClass(3,"Ram","amit12@gmail.com");
+
+		ArrayList<MyClass> a = new ArrayList<MyClass>();
+		{
+		a.add(m1);
+		a.add(m2);
+		a.add(m3);
+		System.out.println("ID \t"+"Student Name \t"+"\tEmail ID");
+		}
+	}
+}

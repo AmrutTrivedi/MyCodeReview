@@ -1,0 +1,14 @@
+
+public class MyClass {
+	int id,score;
+	String name,email;
+	
+	MyClass(int id, int score,String name ,String email)
+	{
+		this.id = id;
+		this.score=score;
+		this.name = name;
+		this.email = email;
+	}
+}
+	

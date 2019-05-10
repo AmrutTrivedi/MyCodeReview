@@ -1,0 +1,94 @@
+import java.util.*;
+public class StudentManagement1 {
+public static void main(String args[]) {
+	
+		MyClass myclass = new  MyClass(0,"Amit","amit12@gmail.com",52);
+		MyClass myclass1 = new MyClass(1,"Amrut","amrut31@gmail.com",63);
+		MyClass myclass2 = new MyClass(2,"Ram","ram30@gmail.com",89);
+		MyClass myclass3 = new MyClass(3,"Rajesh","rajesh08@gmail.com",78);
+		
+		ArrayList<MyClass> array = new ArrayList<MyClass>();
+		array.add(myclass);
+		array.add(myclass1);
+		array.add(myclass2);
+		array.add(myclass3);
+		
+		System.out.println("Enter your choices :");
+		System.out.println("1.List no of students :");
+		System.out.println("2.Create Student ID :");
+		System.out.println("3.Student Details by Id :");
+		System.out.println("4.Delete students by id :");
+		System.out.println("5.Update student details by ID: ");
+		System.out.println("6.Exit");
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Your Choice :");
+		int num = sc.nextInt();
+		
+		switch(num) {
+		case 1:
+			System.out.println("1.List number of students :");
+			System.out.println("ID \t"+"Student_Name \t"+"Email ID   \t"+"Marks"); 
+		    Iterator i = array.iterator();
+		    while(i.hasNext())
+		    {
+			MyClass m = (MyClass)i.next();
+			System.out.println(m.id+"\t"+m.name+" \t"+m.email+ "\t" +m.percentage);	
+		    }
+			System.out.println("Enter Your Choice :");
+			int num2 = sc.nextInt();
+			
+		case 2:
+			System.out.println("2.Create Student ID :");
+			System.out.println("ID \t"+"Student Name \t"+  "Email ID"); 
+			int id1=0;
+			int number1 =sc.nextInt();
+			String string = sc.nextLine();
+			String strings = sc.nextLine();
+			Iterator i1 = array.iterator();
+			while(id1!=0) {
+				
+				MyClass m = (MyClass)i1.next();
+				System.out.println(m.id+"\t"+m.name+" \t "+m.email);
+				System.out.println("ID \t"+"Student Name \t"+  "Email ID");
+	
+			break;}
+			
+		case 3:
+			System.out.println("3.Get Student Details by id :");
+			System.out.println("Enter Student Id");
+			int id =sc.nextInt();
+			array.get(id);
+			System.out.println("ID  \t"+  "Student Name \t"+     "Email ID");
+			Iterator itr = array.listIterator(id);
+				MyClass m = (MyClass)itr.next();
+				System.out.println(m.id+"\t"+m.name+"        \t     "+m.email);	
+				System.out.println("Enter Your Choice :");
+				int num3 = sc.nextInt();
+		   
+		case 4:
+			System.out.println("4.Delete Student Details by id :");
+			System.out.println("Enter Student Id");
+			int n1 = sc.nextInt();
+			array.remove(n1);
+			System.out.println("After Removing :");
+			System.out.println("ID  \t"+  "Student Name \t"+      "Email ID");
+			Iterator i2 = array.iterator();
+			    while(i2.hasNext())
+			    {
+				MyClass m1 = (MyClass)i2.next();
+				System.out.println(m1.id+"\t"+m1.name+"      \t     "+m1.email);	
+			    }
+				System.out.println("Enter Your Choice :");
+				int number = sc.nextInt();
+		
+		case 5:
+			System.out.println("5.Update student details by ID: ");
+			
+		case 6:
+			System.out.println("6.Exit ");
+			break;
+			
+		default:System.out.println("No Such Records Found :\n");	
+		}}}
+

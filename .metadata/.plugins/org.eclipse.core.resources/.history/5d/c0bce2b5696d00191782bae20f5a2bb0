@@ -1,0 +1,20 @@
+
+public class StudentName {
+private String Name;
+String getName()
+{
+	return Name;
+	
+	}
+void setname() {
+	Name ="Rahul";
+}
+}
+class Test13{
+	public static void main(String args[]) {
+		StudentName S1 = new StudentName();
+		S1.setname();
+		S1.getName();
+		
+	}
+}

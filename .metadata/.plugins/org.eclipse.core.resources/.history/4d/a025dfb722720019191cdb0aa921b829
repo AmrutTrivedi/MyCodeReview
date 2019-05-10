@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.*;
+public class MyClass {
+	public static void main(String args[]) {
+		
+		ArrayList<String> al = new ArrayList<String>();
+		ArrayList<Integer> a = new ArrayList<Integer>();
+		{
+		a.add(0,1);
+		a.add(1,2);
+		a.add(2,3);
+		al.add(" Amit ");
+		al.add( " Amrut ");
+		al.add( " Ram ");
+		al.add( " Amit12@gmail.com" );
+		al.add( " amrut31@gmail.com");
+		al.add( " Ram@gmail.com");
+		System.out.println("ID \t"+"Student Name \t"+"\tEmail ID");
+		
+		for(Integer s:a)
+		{
+			System.out.println(s);
+		}
+		System.out.println("ID \t"+"Student Name \t"+"\tEmail ID");
+		
+		for(String s1 :al) {
+			System.out.println(s1);
+		}
+		}
+	}
+}

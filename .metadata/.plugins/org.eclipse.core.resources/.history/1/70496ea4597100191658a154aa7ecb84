@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+
+public class StudentDataBase {
+public static void main(String args[]) {
+	ArrayList<String> al = new ArrayList<String>();
+	al.add(1,"Amit");
+	al.add(2,"Amrut");
+	al.add(3,"Ram");
+	ArrayList<String> al2 = new ArrayList<String>();
+	al2.add(1,"Amit12@gmail.com" );
+	al2.add(2,"amrut31@gmail.com");
+	al2.add(3,"Ram");
+
+	for(String s:al) {
+		System.out.println(s);
+	}
+	
+}
+}

@@ -1,13 +1,16 @@
 
 public class MyClass {
-	int id;
+	int id,percentage;
 	String name,email;
 	
-	MyClass(int r, String s ,String s1)
+	MyClass(int id, String name ,String email, int percentage)
 	{
-		id = r;
-		name = s;
-		email = s1;
+		this.id = id;
+		this.percentage =percentage;
+		this.name  = name;
+		this.email = email;
 	}
-}
+	}
+
+
 	

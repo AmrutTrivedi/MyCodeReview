@@ -1,0 +1,85 @@
+import java.util.*;
+public class StudentManagement1 {
+public static void main(String args[]) {
+	
+		MyClass m1 = new MyClass(0,"Amit","amit12@gmail.com");
+		MyClass m2 = new MyClass(1,"Amrut","amrut31@gmail.com");
+		MyClass m3 = new MyClass(2,"Ram","ram30@gmail.com");
+
+		ArrayList<MyClass> a = new ArrayList<MyClass>();
+		{
+		a.add(m1);
+		a.add(m2);
+		a.add(m3);
+		
+		System.out.println("Enter your choices :");
+		System.out.println("1.List no of students :");
+		System.out.println("2.Student Details by Id :");
+		System.out.println("3.Delete students by id :");
+		System.out.println("4.Exit");
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Your Choice :");
+		int num = sc.nextInt();
+		
+		switch(num) {
+		case 1:
+			System.out.println("1.List number of students :");
+			System.out.println("ID \t"+"Student Name \t"+  "Email ID"); 
+		    Iterator i = a.iterator();
+		    while(i.hasNext())
+		    {
+			MyClass m = (MyClass)i.next();
+			System.out.println(m.id+"\t"+m.name+"        \t     "+m.email);	
+		    }
+		    Scanner sc3 = new Scanner(System.in);
+			System.out.println("Enter Your Choice :");
+			int num2 = sc3.nextInt();
+
+		    
+		case 2: 
+			System.out.println("2.Student Details by id :");
+			System.out.println("Enter Student Id");
+			Scanner sc1 = new Scanner(System.in);
+			int id =sc1.nextInt();
+			a.get(id);
+			System.out.println("ID  \t"+  "Student Name \t"+     "Email ID");
+			Iterator itr = a.listIterator(id);
+				MyClass m = (MyClass)itr.next();
+				System.out.println(m.id+"\t"+m.name+"        \t     "+m.email);	
+				
+				Scanner scanner = new Scanner(System.in);
+				System.out.println("Enter Your Choice :");
+				int num3 = scanner.nextInt();
+		   
+		    
+	
+		case 3:
+			
+			System.out.println("3.Delete Students by id :");
+			Scanner sc2 = new Scanner(System.in);
+			int n1 = sc2.nextInt();
+			a.remove(n1);
+			System.out.println("After Removing :");
+			System.out.println("ID  \t"+  "Student Name \t"+     "Email ID");
+			 Iterator i2 = a.iterator();
+			    while(i2.hasNext())
+			    {
+				MyClass myclass = (MyClass)i2.next();
+				System.out.println(myclass.id+"\t"+myclass.name+"        \t     "+myclass.email);	
+			    }
+			    Scanner scanner1 = new Scanner(System.in);
+				System.out.println("Enter Your Choice :");
+				int number = scanner1.nextInt();
+
+			
+		case 4:
+			System.out.println("4.Exit ");
+			break;
+			
+		default:System.out.println("No Such Records Found :\n");	
+		}
+			
+		}
+}}
+

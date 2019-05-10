@@ -1,0 +1,19 @@
+
+public class StudentName {
+private String Name;
+void getName()
+{
+	System.out.println("The Getter Method gets the name:");
+}
+void setname() {
+	Name ="Rahul";
+}
+}
+class Test13{
+	public static void main(String args[]) {
+		StudentName S1 = new StudentName();
+		S1.setname();
+		S1.getName();
+		
+	}
+}

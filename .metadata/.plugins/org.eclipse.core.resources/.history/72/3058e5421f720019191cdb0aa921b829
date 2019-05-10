@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+public class MyClass {
+	public static void main(String args[]) {
+		
+		ArrayList<String> al = new ArrayList<String>();
+		ArrayList<Integer> a = new ArrayList<Integer>();
+		{
+		a.add(0,1);
+		a.add(1,2);
+		a.add(2,3);
+		al.add(0, " Amit ");
+		al.add(1, " Amrut ");
+		al.add(2, " Ram ");
+		al.add(0, " Amit12@gmail.com" );
+		al.add(1, " amrut31@gmail.com");
+		al.add(2, " Ram@gmail.com");
+		System.out.println("ID \t"+"Student Name \t"+"\tEmail ID");
+		System.out.println(a+"   "+al+"   "+al);
+		
+		}
+	}
+}

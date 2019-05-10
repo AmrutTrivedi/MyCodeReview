@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+
+public class ConvertListToMap {
+	public static void main(String args[]) {
+		ArrayList<String> al = new ArrayList<String>();
+		
+		al.add(0,"Raju");
+		al.add(1,"Pushpa");
+		al.add(2,"Deepak");
+		al.add(3,"Sunil");
+		System.out.println("The List Values are :"+al);
+		
+		Map<Integer,String> Maps = new HashMap<Integer,String>();
+		for(String m:al)
+		{
+			System.out.println("Maps :"+m);
+		}
+	}
+	
+}
