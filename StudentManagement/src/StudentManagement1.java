@@ -1,26 +1,21 @@
 import java.util.*;
+
 public class StudentManagement1 {
 public static void main(String args[]) {
 	
-		MyClass myclass =  new  MyClass(0,"Amit","amit12@gmail.com",52);
+		MyClass myclass =  new MyClass(0,"Amit","amit12@gmail.com",52);
 		MyClass myclass1 = new MyClass(1,"Amrut","amrut31@gmail.com",63);
 		MyClass myclass2 = new MyClass(2,"Ram","rammahes@gmail.com",89);
 		MyClass myclass3 = new MyClass(3,"Rajesh","rajesh08@gmail.com",78);
+		MyClass myclass4 = new MyClass(0, null, null, 0);
 		
 		ArrayList<MyClass> array = new ArrayList<MyClass>();
 		array.add(myclass);
 		array.add(myclass1);
 		array.add(myclass2);
 		array.add(myclass3);
-		
-		int number1=0,number2=0,number3=0;
-		int number4 = 0;
-		int a;
-		
-		String string = null,strings = null;
-		String s1,s2;
-		
-		System.out.println("Enter your choices :");
+	
+		System.out.println("Enter your choice :");
 		System.out.println("1.List no of students :");
 		System.out.println("2.Create Student details :");
 		System.out.println("3.Student Details by Id :");
@@ -28,76 +23,89 @@ public static void main(String args[]) {
 		System.out.println("5.Update student details by ID: ");
 		System.out.println("6.Exit");
 
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter Your Choice :");
-		int num = sc.nextInt();
+		int number = scanner.nextInt();
 		
-		switch(num) {
+		switch(number) {
 		case 1:
 			System.out.println("1.List number of students :");
 			System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks"); 
-		    Iterator i = array.iterator();
-		    while(i.hasNext())
+		    Iterator<MyClass> itr = array.iterator();
+		    while(itr.hasNext())
 		    {
-			MyClass m = (MyClass)i.next();
+			MyClass m = (MyClass)itr.next();
 			System.out.println(m.id+"\t"+m.name+" \t"+m.email+ "\t" +m.percentage);	
 		    }
 			System.out.println("Enter Your Choice :");
-			int num1 = sc.nextInt();
+			scanner.nextInt();
 			
 		case 2:
 			System.out.println("2.Create Student details :");
 				System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks"); 	
-				number1 =sc.nextInt();
-				string = sc.nextLine();
-				Iterator itr1 = array.iterator();
+				int number2 =scanner.nextInt();
+				String string = scanner.nextLine();
+				Iterator<MyClass> itr1 = array.iterator();
+				System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks"); 
 			    while(itr1.hasNext())
 			    {
 				MyClass m = (MyClass)itr1.next();
 				System.out.println(m.id+"\t"+m.name+" \t"+m.email+ "\t" +m.percentage);	
 			    }
-			    System.out.println(number1+"   "+string);
-				break;
-			
+			    System.out.println(number2+"   "+string);
+				
 		case 3:
 			System.out.println("3.Get Student Details by id :");
 			System.out.println("Enter Student Id");
-			int id1 =sc.nextInt();
-			array.get(id1);
+			int id =scanner.nextInt();
+			array.get(id);
 			System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks"); 
-			Iterator itr = array.listIterator(id1);
-				MyClass m = (MyClass)itr.next();
+			Iterator<MyClass> itr2 = array.listIterator(id);
+				MyClass m = (MyClass)itr2.next();
 				System.out.println(m.id+"\t"+m.name+" \t"+m.email+ "\t" +m.percentage);
 				System.out.println("Enter Your Choice :");
-				int num3 = sc.nextInt();
+				scanner.nextInt();
 		   
 		case 4:
 			System.out.println("4.Delete Student Details by id :");
 			System.out.println("Enter Student Id");
-			int n1 = sc.nextInt();
-			array.remove(n1);
+			int number4 = scanner.nextInt();
+			array.remove(number4);
 			System.out.println("After Removing :");
 			System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks"); 
-			Iterator i2 = array.iterator();
-			    while(i2.hasNext())
+			Iterator<MyClass> itr3 = array.iterator();
+			    while(itr3.hasNext())
 			    {
-				MyClass m1 = (MyClass)i2.next();
+				MyClass m1 = (MyClass)itr3.next();
 				System.out.println(m1.id+"\t"+m1.name+" \t"+m1.email+ "\t" +m1.percentage);	
 			    }
-				System.out.println("Enter Your Choice :");
-				int num4 = sc.nextInt();
+			    System.out.println("Enter Your Choice :");
+				scanner.nextInt();
 		
 		case 5:
 			System.out.println("5.Update student details by ID: ");
-			int updateid =sc.nextInt();
-			for(int i1=0;i1<updateid;i1++)
-			{
+			System.out.println("Enter Id to be updated :");
+			
+			int updateid = scanner.nextInt();
+			String updatename = scanner.nextLine();
+			
+			MyClass myclass5 = new MyClass(updateid,"Darshan","darshan@gmail.com",79);
+			array.set(updateid,myclass5);
+			Iterator<MyClass> iterate = array.iterator();
+			System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks"); 
+			    while(iterate.hasNext())
+			    {
+				MyClass myupdate = (MyClass)iterate.next();
+				System.out.println(myupdate.id+"\t"+myupdate.name+" \t"+myupdate.email+ "\t" +myupdate .percentage);	
+			    }
+				System.out.println("Enter Your Choice :");
+				scanner.nextInt();
 				
-			}
 		case 6:
 			System.out.println("6.Exit ");
 			break;
 			
 		default:System.out.println("No Such Records Found :\n");	
-		}}}
+		}}
+}
 

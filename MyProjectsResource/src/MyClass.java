@@ -8,7 +8,7 @@ interface Personal {
 public class MyClass {
 	String name = "Amrut";
 	int age = 25, emp_id = 1052;
-	long phoneNo = 9710044201l;
+	long phoneNo = 9999888865l;
 
 	void details() {
 		System.out.println("Student Details :");

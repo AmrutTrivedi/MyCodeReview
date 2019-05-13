@@ -1,0 +1,105 @@
+import java.util.*;
+
+public class StudentManagement1 {
+public static void main(String args[]) {
+	
+		MyClass myclass =  new MyClass(0,"Amit","amit12@gmail.com",52);
+		MyClass myclass1 = new MyClass(1,"Amrut","amrut31@gmail.com",63);
+		MyClass myclass2 = new MyClass(2,"Ram","rammahes@gmail.com",89);
+		MyClass myclass3 = new MyClass(3,"Rajesh","rajesh08@gmail.com",78);
+		
+		ArrayList<MyClass> array = new ArrayList<MyClass>();
+		array.add(myclass);
+		array.add(myclass1);
+		array.add(myclass2);
+		array.add(myclass3);
+	
+		System.out.println("Enter your choice :");
+		System.out.println("1.List no of students :");
+		System.out.println("2.Create Student details :");
+		System.out.println("3.Student Details by Id :");
+		System.out.println("4.Delete students by id :");
+		System.out.println("5.Update student details by ID: ");
+		System.out.println("6.Exit");
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter Your Choice :");
+		int number = scanner.nextInt();
+		
+		switch(number) {
+		case 1:
+			System.out.println("1.List number of students :");
+			System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks"); 
+		    Iterator<MyClass> itr = array.iterator();
+		    while(itr.hasNext())
+		    {
+			MyClass m = (MyClass)itr.next();
+			System.out.println(m.id+"\t"+m.name+" \t"+m.email+ "\t" +m.percentage);	
+		    }
+			System.out.println("Enter Your Choice :");
+			scanner.nextInt();
+			
+		case 2:
+			System.out.println("2.Create Student details :");
+				System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks"); 	
+				int number2 =scanner.nextInt();
+				String string = scanner.nextLine();
+				Iterator<MyClass> itr1 = array.iterator();
+			    while(itr1.hasNext())
+			    {
+				MyClass m = (MyClass)itr1.next();
+				System.out.println(m.id+"\t"+m.name+" \t"+m.email+ "\t" +m.percentage);	
+			    }
+			    System.out.println(number2+"   "+string);
+				
+		case 3:
+			System.out.println("3.Get Student Details by id :");
+			System.out.println("Enter Student Id");
+			int id =scanner.nextInt();
+			array.get(id);
+			System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks"); 
+			Iterator<MyClass> itr2 = array.listIterator(id);
+				MyClass m = (MyClass)itr2.next();
+				System.out.println(m.id+"\t"+m.name+" \t"+m.email+ "\t" +m.percentage);
+				System.out.println("Enter Your Choice :");
+				scanner.nextInt();
+		   
+		case 4:
+			System.out.println("4.Delete Student Details by id :");
+			System.out.println("Enter Student Id");
+			int number4 = scanner.nextInt();
+			array.remove(number4);
+			System.out.println("After Removing :");
+			System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks"); 
+			Iterator<MyClass> itr3 = array.iterator();
+			    while(itr3.hasNext())
+			    {
+				MyClass m1 = (MyClass)itr3.next();
+				System.out.println(m1.id+"\t"+m1.name+" \t"+m1.email+ "\t" +m1.percentage);	
+			    }
+				System.out.println("Enter Your Choice :");
+				scanner.nextInt();
+		
+		case 5:
+			System.out.println("5.Update student details by ID: ");
+			int updateid =scanner.nextInt();
+			MyClass myclass4 = new MyClass(updateid,"Ram", "ram03@gmail.com",   79);
+			array.set(updateid,myclass4);
+			Iterator<MyClass> iterate = array.iterator();
+			    while(iterate.hasNext())
+			    {
+				MyClass myupdate = (MyClass)iterate.next();
+				System.out.println(myupdate.id+"\t"+myupdate.name+" \t"+myupdate.email+ "\t" +myupdate .percentage);	
+			    }
+				System.out.println("Enter Your Choice :");
+				scanner.nextInt();
+				
+		case 6:
+			System.out.println("6.Exit ");
+			break;
+			
+		default:System.out.println("No Such Records Found :\n");	
+		}}
+
+}
+

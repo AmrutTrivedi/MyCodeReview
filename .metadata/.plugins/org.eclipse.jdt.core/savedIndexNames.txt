@@ -8,7 +8,6 @@ INDEX VERSION 1.131+C:\Users\Revature\eclipse-workspace\.metadata\.plugins\org.e
 1417411144.index
 2663008219.index
 1817446190.index
-3477579531.index
 2273491807.index
 449384428.index
 2725782233.index

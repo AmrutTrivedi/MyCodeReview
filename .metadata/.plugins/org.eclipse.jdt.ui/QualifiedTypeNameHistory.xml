@@ -24,4 +24,5 @@
 <fullyQualifiedTypeName name="com.myproject.practice.StudentDataBase"/>
 <fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.Iterator"/>
 <fullyQualifiedTypeName name="com.myproject.practice.Student"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
 </qualifiedTypeNameHistroy>
