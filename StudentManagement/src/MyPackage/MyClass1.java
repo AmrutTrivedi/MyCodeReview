@@ -16,4 +16,9 @@ MyClass1(int id, String name,String email,int percentage)
 	this.email=email;
 	this.percentage=percentage;
 }
-}
+public String toString()
+{
+	String updateemail = null;
+	return updateemail;
+	
+}}

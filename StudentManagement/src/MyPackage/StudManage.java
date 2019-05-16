@@ -25,10 +25,13 @@ public static void main(String args[]) {
 		array.add(myclass4);
 		array.add(myclass6);	
 		
+		int number2 = 0;
+		String string = null;
+		
 		System.out.println("Enter your choice :");
 		System.out.println("1.List no of students :");
 		System.out.println("2.Create Student details :");
-		System.out.println("3.Student Details by3 :");
+		System.out.println("3.Student Details by id :");
 		System.out.println("4.Delete students by id :");
 		System.out.println("5.Update student details by ID: ");
 		System.out.println("6.Exit");
@@ -53,13 +56,13 @@ public static void main(String args[]) {
 		case 2:
 			System.out.println("2.Create Student details :");
 				System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks"); 	
-				int number2 =scanner.nextInt();
-				String string = scanner.nextLine();
+				number2 =scanner.nextInt();
+				string = scanner.nextLine();
 				Iterator<MyClass1> itr1 = array.iterator();
 				System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks"); 
 			    while(itr1.hasNext())
 			    {
-				MyClass1 m = (MyClass1)itr1.next();
+				MyClass1 m = (MyClass1)itr1.next();;
 				System.out.println(m.id+" \t"+m.name+"\t"+m.email+ "\t" +m.percentage);	
 			    }
 			    System.out.println(number2+"   "+string);
@@ -69,20 +72,14 @@ public static void main(String args[]) {
 			System.out.println("Enter Student Id");
 			int myid =scanner.nextInt();
 			System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks");
-			for(MyClass1 m:array) {	
+			for(MyClass1 m:array) 
 				if(myid==m.id) {
 					System.out.println(m.id+"\t"+m.name+" \t"+m.email+ "\t" +m.percentage);	
 				}
-			}
+				if(number2==myid) {
+					System.out.println(number2+"   "+string);
+				}
 
-			/*
-			 * Iterator<MyClass1> itr2 = array.listIterator(); 
-			 * MyClass1 m =(MyClass1)itr2.next(); 
-			 * if(myid>m.id) {
-			 * System.out.println(m.id+"\t"+m.name+" \t"+m.email+ "\t" +m.percentage); }else
-			 * if(myid<m.id) { System.out.println(m.id+"\t"+m.name+" \t"+m.email+ "\t"
-			 * +m.percentage); } else { System.out.println("Cannot be iterated:"); }
-			 */
 			System.out.println("Enter Your Choice :");
 			scanner.nextInt();
 			
@@ -92,18 +89,26 @@ public static void main(String args[]) {
 			int number4 = scanner.nextInt();
 			System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks");
 			for(MyClass1 m:array) {	
-				array.remove(number4);
-				System.out.println(m.id+"\t"+m.name+" \t"+m.email+ "\t" +m.percentage);	
-			}
+				for(int i = 0;i<=array.size();i++) {
 			
+					}
+				System.out.println(m.id+"\t"+m.name+" \t"+m.email+ "\t" +m.percentage);	
+			
+			}
+		
 		case 5:
 			System.out.println("5.Update student details by ID: ");
 			System.out.println("Enter Id to be updated :");
-			
+			System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks");
+		
 			int updateid = scanner.nextInt();
 			String updatename = scanner.nextLine();
 			
-			MyClass1 myclass5 = new MyClass1(0,"Darshan","darshan@gmail.com",79);
+			String s1 = String.valueOf(updatename);
+			String s2 = String.valueOf(updatename);
+		
+			MyClass1 myclass5 = new MyClass1(updateid,updatename,updatename,updateid);
+			
 			array.set(updateid,myclass5);
 			Iterator<MyClass1> iterate = array.iterator();
 			System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks"); 
@@ -114,7 +119,9 @@ public static void main(String args[]) {
 			    }
 				System.out.println("Enter Your Choice :");
 				scanner.nextInt();
-				
+			
+			
+				break;
 		case 6:
 			System.out.println("6.Exit ");
 			break;

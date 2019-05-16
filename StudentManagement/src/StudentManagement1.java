@@ -8,7 +8,7 @@ public static void main(String args[]) {
 		MyClass myclass2 = new MyClass(2,"Ram","rammahes@gmail.com",89);
 		MyClass myclass3 = new MyClass(3,"Rajesh","rajesh08@gmail.com",78);
 		
-		MyClass myclass4 = new MyClass(0,null, null, 0);
+		MyClass myclass5 = new MyClass(0,null, null, 0);
 		
 		ArrayList<MyClass> array = new ArrayList<MyClass>();
 		array.add(myclass);
@@ -89,8 +89,8 @@ public static void main(String args[]) {
 			
 			int updateid = scanner.nextInt();
 			
-			MyClass myclass5 = new MyClass(updateid,"Darshan","darshan@gmail.com",79);
-			array.set(updateid,myclass5);
+			MyClass myclass51 = new MyClass(updateid,"Darshan","darshan@gmail.com",79);
+			array.set(updateid,myclass51);
 			Iterator<MyClass> iterate = array.iterator();
 			System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks"); 
 			    while(iterate.hasNext())

@@ -1,0 +1,23 @@
+package MyPackage;
+
+import java.util.Scanner;
+
+public class MyClass1 {
+
+int id;
+String name;
+String email;
+int percentage;
+
+MyClass1(int id, String name,String email,int percentage)
+{
+	this.id=id;
+	this.name=name;
+	this.email=email;
+	this.percentage=percentage;
+}
+
+public MyClass1(int updateid, int updatename, int updateemail, int updatePercentage) {
+	// TODO Auto-generated constructor stub
+}
+}
