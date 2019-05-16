@@ -92,9 +92,10 @@ public static void main(String args[]) {
 			int number4 = scanner.nextInt();
 			System.out.println("ID \t"+"Student_Name  \t"  +"Email ID   \t"+"Marks");
 			for(MyClass1 m:array) {	
+			for(int i=0;i<number4;i++) {
 				array.remove(number4);
 				System.out.println(m.id+"\t"+m.name+" \t"+m.email+ "\t" +m.percentage);	
-			}
+			}}
 			
 		case 5:
 			System.out.println("5.Update student details by ID: ");
