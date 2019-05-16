@@ -1,0 +1,28 @@
+
+public class MyClass {
+	private int id[] = new int[5];
+	private int percentage;
+	private String name,email;
+	MyClass(int[] n){
+		id = n;
+	}
+	
+	int[] getid()
+	{
+		return id;
+		
+	}
+	void setid()
+	{
+		int id[] = {1,2,3,4,5};	
+	}
+	MyClass (String name ,String email, int percentage)
+	{
+		this.percentage =percentage;
+		this.name  = name;
+		this.email = email;
+	}
+	}
+
+
+	

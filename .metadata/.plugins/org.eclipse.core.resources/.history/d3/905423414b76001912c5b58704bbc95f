@@ -1,0 +1,30 @@
+package MyPackage;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class MyClass1 {
+	
+private static int[] id;
+String name;
+String email;
+int percentage;
+
+public MyClass1(int i, String name,String email,int percentage)
+{
+	MyClass1.id=Arrays.copyOf(id, id.length);
+	this.name=name;
+	this.email=email;
+	this.percentage=percentage;
+	
+}
+public int getElement(int index) {
+	return id[index];
+	
+}
+public int getArrayLength() {
+	return id.length;
+	
+	
+}
+}

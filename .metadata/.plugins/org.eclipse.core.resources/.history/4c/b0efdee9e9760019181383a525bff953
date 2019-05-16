@@ -1,0 +1,34 @@
+package MyPackage;
+
+import java.util.Scanner;
+
+public class MyClass1 {
+	
+private int id;
+String name;
+String email;
+int percentage;
+
+MyClass1(int id, String name,String email,int percentage)
+{
+	this.id=id;
+	this.name=name;
+	this.email=email;
+	this.percentage=percentage;
+	
+}
+public int getId()
+{
+	return id;
+}
+public void setId(int id) {
+	this.id= id;
+}
+public String toString()
+{
+	return this.id+" "+this.name+" "+this.email+" "+this.percentage("+id+","+name+","+email+","+percentage+");
+}
+private int percentage(String string, String string2, String string3, String string4) {
+	// TODO Auto-generated method stub
+	return 0;
+}}

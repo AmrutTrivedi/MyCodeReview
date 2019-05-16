@@ -1,0 +1,29 @@
+package MyPackage;
+
+import java.util.Scanner;
+
+public class MyClass1 {
+	
+private int[] id = new int[5];
+String name;
+String email;
+int percentage;
+
+MyClass1(int[] i, String name,String email,int percentage)
+{
+	this.id=i;
+	this.name=name;
+	this.email=email;
+	this.percentage=percentage;
+	
+}
+public MyClass1(int i, String name2, String email2, int percentage2) {
+	// TODO Auto-generated constructor stub
+}
+public int[] getid()
+{
+	return id;
+}
+public void setId(int[] id) {
+	int[] id1 = {1,2,3,4,5};
+}}

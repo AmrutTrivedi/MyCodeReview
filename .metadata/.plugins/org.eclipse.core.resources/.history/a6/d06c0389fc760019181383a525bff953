@@ -1,0 +1,33 @@
+package MyPackage;
+
+import java.util.Scanner;
+
+public class MyClass1 {
+	
+	
+	public int getid() {
+		return id;
+	}
+	public void setid(int id) {
+		this.id = id;
+	}	
+private int id;
+String name;
+String email;
+int percentage;
+
+MyClass1(int id, String name,String email,int percentage)
+{
+	this.id=id;
+	this.name=name;
+	this.email=email;
+	this.percentage=percentage;
+	
+}
+public int getId()
+{
+	return id;
+}
+public void setId(int id2) {
+	int[] id1 = {1,2,3,4,5};
+}}

@@ -1,0 +1,19 @@
+package MyPackage;
+
+import java.util.Scanner;
+
+public class MyClass1 {
+
+int id;
+String name;
+String email;
+int percentage;
+
+MyClass1(int id, String name,String email,int percentage)
+{
+	this.id=id;
+	this.name=name;
+	this.email=email;
+	this.percentage=percentage;
+}
+}

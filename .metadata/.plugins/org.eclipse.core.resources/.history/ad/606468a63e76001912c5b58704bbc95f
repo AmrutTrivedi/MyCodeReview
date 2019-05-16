@@ -1,0 +1,27 @@
+package MyPackage;
+
+import java.util.Scanner;
+
+public class MyClass1 {
+	
+private int arr[];
+String name;
+String email;
+int percentage;
+
+MyClass1(String name,String email,int percentage)
+{
+	this.name=name;
+	this.email=email;
+	this.percentage=percentage;
+	
+}
+
+int[] getId()
+{
+	return new int[] {1,2,3,4,5};
+		
+}
+
+
+}
